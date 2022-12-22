@@ -1,0 +1,11 @@
+.header{
+    position: absolute;
+    display: flex;
+    margin: 51px 0 41px 0;
+    gap: 10px;
+    z-index: 5;
+    
+    &__cart{
+        margin-left: 67px;
+    }
+}

@@ -1,0 +1,264 @@
+h2{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    margin: 130px 0 92px 0;
+}
+
+.slider {
+    display: flex;
+    height: 826px;
+    &__nav{
+        display: flex;
+        margin-left: 265px ;
+        width: 114px;
+        height: 4px;
+        gap: 12px;
+
+    }
+    &__elem{
+        width: 30px;
+        height: 100%;
+        background: #D1D1D1;
+    }
+}
+
+.text-slider {
+    width: 650px;
+    margin-top: 265px;
+    &__title {
+        width: 585px;
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 110%;
+        /* or 61px */
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__text {
+        width: 385px ;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        /* or 28px */
+        text-align: right;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin: 45px 0 52px 0;
+        text-align: right;
+    }
+    &__btn-wrapper{
+        display: flex;
+        margin-left:75px;
+        margin-bottom: 86px;
+        &_btn-arrow{
+            display: flex;
+            width: 67px;
+            height: 67px;
+            align-items: center;
+            justify-content: center;
+            background: rgba(110, 156, 159, 0.1);
+        }
+    }
+    &__btn{
+        width: 243px;
+        height: 68px;
+        padding: 22px 50px;
+        background-color: #6E9C9F;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 138.9%;
+        /* identical to box height, or 24px */
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: white;
+    }
+}
+
+.photo-slider {
+    position: absolute;
+    z-index: 0;
+    width: 705px;
+    top: 0;
+    right: 0;
+    padding: 120px 221px 54px 50px;
+    background-color:#F1EADC; 
+}
+.overlay{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(110, 156, 159, 0.64);
+    opacity: 0;
+
+}
+.overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.new-collection{
+   &__wrapp{
+        display: flex;
+        gap: 30px;
+        margin-bottom: 67px;
+   }
+   &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 50px;
+        width: 243px;
+        height: 68px;
+        margin: 0 auto;
+        border: 1px solid #6E9C9F;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 138.9%;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #6E9C9F;
+        cursor: pointer;
+   }
+   &__btn:hover{
+        background-color: #6E9C9F;
+        color: #FFFFFF;
+
+   }
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 367px;
+    &__img-wrapper{
+        width: 350px;
+        height: 478px;
+        position: relative;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 1 0;
+    }
+    &__title{
+        margin: 24px 0 7px 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__price{
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #998E78;
+    }
+}
+
+.important{
+    &__wrapper{
+        display: flex;
+        gap: 30px;
+    }
+}
+.important-element{
+    width: 350px;
+    &__title{
+        margin: 37px 0 24px 0;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__description{
+        width: 305px;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+}
+
+.dream-team{
+    &__wrapper{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        height: 487px;
+        margin-bottom: 130px;
+    }
+    &__slider{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        left: -61px;
+        &_nav{
+            display: flex;
+            position: absolute;
+            bottom: 62px;
+            left: 372px;
+            width: 114px;
+            height: 4px;
+            gap: 12px;
+    
+        }
+        &_elem{
+            width: 30px;
+            height: 100%;
+            background: #D1D1D1;
+        }
+    }
+    &__image-wrap{
+        width: 729px;
+        height: 100%;
+        margin: 0 31px 0 33px;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.dream-team-desc{
+    width: 255px;
+    &__title{
+      
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__text{
+        margin: 28px 0 28px 0;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #000000;
+    }
+    &__link{
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        color: #6E9C9F;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+}
