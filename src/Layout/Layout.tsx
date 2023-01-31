@@ -1,26 +1,28 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import { About } from "../components/About/About";
-import { Contacts } from "../components/Contacts/Contacts";
-import { Home } from "../components/Home/Home";
-import { NotFound } from "../components/NotFound/NotFound";
-import { Shop } from "../components/Shop/Shop";
+import { About } from "../pages/About/About";
+import { Contacts } from "../pages/Contacts/Contacts";
+import { Home } from "../pages/Home/Home";
+import { NotFound } from "../pages/NotFound/NotFound";
+import { Shop } from "../pages/Shop/Shop";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
+import { Cart } from "../pages/Cart/Cart";
 
 export const Layout = () => {
   return (
-    <>
+    <div>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contacts" element={<Contacts />} />
-        <Route path="/Shop" element={<Shop />} />
-        <Route path="/About" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       <Footer />
-    </>
+    </div>
   );
 };

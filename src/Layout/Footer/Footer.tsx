@@ -16,12 +16,12 @@ export const Footer = () => {
                 <p>Privacy Policy</p>
                 <p>Public offer</p>
               </div>
-              <div className="categories">
-                <ul className="categories__menu">
-                  <li className="categories__link">Topcoats</li>
-                  <li className="categories__link">Sweatshirts</li>
-                  <li className="categories__link">Cardigans</li>
-                  <li className="categories__link">Hoodies</li>
+              <div className="nav-categories">
+                <ul className="nav-categories__menu">
+                  <li className="nav-categories__link">Topcoats</li>
+                  <li className="nav-categories__link">Sweatshirts</li>
+                  <li className="nav-categories__link">Cardigans</li>
+                  <li className="nav-categories__link">Hoodies</li>
                 </ul>
               </div>
             </div>

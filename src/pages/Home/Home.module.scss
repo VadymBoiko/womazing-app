@@ -1,3 +1,5 @@
+
+
 h2{
     font-weight: 500;
     font-size: 40px;
@@ -8,8 +10,10 @@ h2{
 }
 
 .slider {
+    position: relative;
     display: flex;
     height: 826px;
+    transition-duration: 0.5 ease;
     &__nav{
         display: flex;
         margin-left: 265px ;
@@ -23,26 +27,35 @@ h2{
         height: 100%;
         background: #D1D1D1;
     }
+    &__arrow{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #cbd664;
+        border: none;
+        position: absolute;
+        cursor: pointer;
+    }
+    &__arrowLeft{
+        left: -75px;
+        top: calc(50% - 20px);
+        transform: rotate(90deg);
+    }
+    &__arrowRight{
+        right: -75px;
+        top: calc(50% - 20px);
+        transform: rotate(-90deg);
+    }
 }
 
 .text-slider {
     width: 650px;
     margin-top: 265px;
-    &__title {
-        width: 585px;
-        font-weight: 500;
-        font-size: 55px;
-        line-height: 110%;
-        /* or 61px */
-        letter-spacing: 0.02em;
-        color: #000000;
-    }
     &__text {
         width: 385px ;
         font-weight: 400;
         font-size: 20px;
         line-height: 140%;
-        /* or 28px */
         text-align: right;
         letter-spacing: 0.02em;
         color: #000000;
@@ -52,7 +65,7 @@ h2{
     &__btn-wrapper{
         display: flex;
         margin-left:75px;
-        margin-bottom: 86px;
+        margin-bottom: 46px;
         &_btn-arrow{
             display: flex;
             width: 67px;
@@ -72,22 +85,42 @@ h2{
         font-weight: 400;
         font-size: 17px;
         line-height: 138.9%;
-        /* identical to box height, or 24px */
         text-align: center;
         letter-spacing: 0.02em;
+        transition: all 0.5s ease;
         color: white;
+        cursor: pointer;
     }
+    &__btn:hover{
+        background-color: #509498;
+    }
+}
+.photo-slider__background{
+    width: 705px;
+    height: 826px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:#F1EADC; 
 }
 
 .photo-slider {
-    position: absolute;
-    z-index: 0;
-    width: 705px;
-    top: 0;
-    right: 0;
-    padding: 120px 221px 54px 50px;
-    background-color:#F1EADC; 
+    width: 410px;
+    height: 649px;
+    margin-top: 120px;
+    background-position: center;
+    background-size:cover;
 }
+ 
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.fadeInAnimation {
+    animation: fadeIn 1s;
+}
+
 .overlay{
     position: absolute;
     display: flex;
@@ -97,6 +130,7 @@ h2{
     height: 100%;
     background: rgba(110, 156, 159, 0.64);
     opacity: 0;
+    transition: all 0.5s ease;
 
 }
 .overlay:hover{
@@ -125,6 +159,7 @@ h2{
         letter-spacing: 0.02em;
         color: #6E9C9F;
         cursor: pointer;
+        transition: all 0.5s ease;
    }
    &__btn:hover{
         background-color: #6E9C9F;
@@ -220,6 +255,12 @@ h2{
             height: 100%;
             background: #D1D1D1;
         }
+        &_arrow-right{
+            cursor: pointer;
+        }
+        &_arrow-left{
+            cursor: pointer;
+        }
     }
     &__image-wrap{
         width: 729px;
@@ -257,6 +298,7 @@ h2{
         line-height: 140%;
         letter-spacing: 0.02em;
         color: #6E9C9F;
+        transition: all 0.5s ease;
     }
     &__link:hover{
         text-decoration: underline;

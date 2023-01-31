@@ -1,0 +1,36 @@
+.shop-wrapper {
+    padding: 269px 0 130px 0;
+}
+
+.navigation {
+    margin: 25px 0 25px 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.categories{
+    display: flex;
+    gap:  10px;
+    &__link{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 162px;
+        height: 62px;
+        border: 1px solid #000000;;
+        list-style-type: none;
+        cursor: pointer;
+        &.active{
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+    }
+}
+.calculation-products{
+    margin: 92px 0 65px 0;
+    color: #808080;
+}

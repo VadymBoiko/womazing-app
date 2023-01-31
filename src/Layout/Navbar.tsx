@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Logo } from "../icons/Logo";
 
 export const Navbar = () => {
@@ -9,10 +9,10 @@ export const Navbar = () => {
         <Logo />
       </div>
       <div className="navigate__menu">
-        <Link to="/">Home</Link>
-        <Link to="/Shop">Shop</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Contacts">Contacts</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Shop">Shop</NavLink>
+        <NavLink to="/About">About</NavLink>
+        <NavLink to="/Contacts">Contacts</NavLink>
       </div>
     </nav>
   );

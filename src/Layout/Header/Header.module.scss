@@ -4,8 +4,29 @@
     margin: 51px 0 41px 0;
     gap: 10px;
     z-index: 5;
-    
+    &__call{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 27px;
+        height: 27px;
+        transition:  all 0.5s ease;
+    }
+    &__call:hover{
+        background-color: #6E9C9F;
+    }
+    &__call:hover .svg__call {
+        fill: #FFFFFF;
+
+    }
     &__cart{
         margin-left: 67px;
     }
+}
+.call-wrapper{
+    display: flex;
+    align-items: center;
+}
+.svg__call{
+    transition:  all 0.5s ease;
 }

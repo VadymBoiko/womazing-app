@@ -1,32 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
-.container{
+.container {
     width: 100%;
     max-width: 1110px;
     margin: 0 auto;
 }
-.navigate{
+
+.navigate {
     display: flex;
-    &__menu{
+    align-items: center;
+
+    &__menu {
         display: flex;
         gap: 45px;
         margin: 0 176px 0 146px;
     }
-    &__menu > a{
+
+    &__menu>a {
         text-decoration: none;
         font-weight: 400;
         font-size: 15px;
         line-height: 140%;
-        letter-spacing: 0.02em;
         color: #000000;
+        letter-spacing: 0.02em;
+        transition: all 0.5s ease;
+        &.active{
+            color:#6E9C9F;
+            font-weight: 700;
+        }
     }
+    
+}
+
+h1 {
+    width: 585px;
+    height: 200px;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 110%;
+    /* or 61px */
+    letter-spacing: 0.02em;
+    color: #000000;
 }
 
 @import './Layout/Header/Header.module.scss';
-@import './components/Home/Home.module.scss';
+@import './pages/Home/Home.module.scss';
 @import './Layout/Footer/Footer.module.scss';
+@import './pages/Shop/Shop.module.scss';
+@import './components/ProductList/ProductList.scss';
