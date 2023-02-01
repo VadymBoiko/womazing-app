@@ -1,7 +1,8 @@
 import React from 'react'
+import { Breadcrumbs } from '../../components/Breadcrumbs/Breadcrumbs'
 
 export const About = () => {
   return (
-    <div>About</div>
+    <div>   <Breadcrumbs /></div>
   )
 }

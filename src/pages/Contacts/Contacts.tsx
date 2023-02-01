@@ -1,7 +1,10 @@
 import React from 'react'
+import { Breadcrumbs } from '../../components/Breadcrumbs/Breadcrumbs'
 
 export const Contacts = () => {
   return (
-    <div>Contacts</div>
+    <div>
+         <Breadcrumbs />
+    </div>
   )
 }

@@ -48,6 +48,9 @@ h1 {
     letter-spacing: 0.02em;
     color: #000000;
 }
+a{
+    text-decoration: none;
+}
 
 @import './Layout/Header/Header.module.scss';
 @import './pages/Home/Home.module.scss';
