@@ -11,10 +11,7 @@ export const Home = () => {
   return (
     <div className="container">
       <div className='photo-slider__background'></div>
-      <Slider 
-        autoPlay ={ false }
-        autoPlayTime = { 5000 }
-        />
+      <Slider autoPlayTime = { 7000 } />
       <section className="new-collection">
         <h2 className="new-collection__title">New collection</h2>
         <div className="new-collection__wrapper">

@@ -4,15 +4,16 @@ import { Dot } from './Dot';
 
 interface DotsProps{
   slidesCount: number;
+  slideNumber: number;
   goToSlide: (number:number) => void
 }
 
-export const Dots:FC<DotsProps> = ({ slidesCount, goToSlide }) => {
+export const Dots:FC<DotsProps> = ({slideNumber, slidesCount, goToSlide }) => {
 
   const renderDots = () =>{
     const dots = [];
     for(let i= 0; i< slidesCount; i ++){
-      dots.push(<Dot key={`dot-${i}`} number={i} goToSlide={goToSlide} /> )
+      dots.push(<Dot key={`dot-${i}`} slideNumber={slideNumber} number={i} goToSlide={goToSlide} /> )
     }
     return dots
   }
