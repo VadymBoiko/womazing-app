@@ -4,26 +4,33 @@
 
 
 
-.categories{
+.categories {
     display: flex;
-    gap:  10px;
-    &__link{
+    gap: 10px;
+    &__link {
         text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 162px;
         height: 62px;
-        border: 1px solid #000000;;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 140%;
+        letter-spacing: 0.02em;
+        border: 1px solid #000000;
         list-style-type: none;
         cursor: pointer;
-        &.active{
+        transition: all 0.5s ease;
+        &:hover,
+        &_active {
             background-color: #000000;
             color: #FFFFFF;
         }
     }
 }
-.calculation-products{
+
+.calculation-products {
     margin: 92px 0 65px 0;
     color: #808080;
 }
