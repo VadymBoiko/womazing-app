@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
 
 .container {
@@ -30,12 +40,13 @@
         color: #000000;
         letter-spacing: 0.02em;
         transition: all 0.5s ease;
-        &.active{
-            color:#6E9C9F;
+
+        &.active {
+            color: #6E9C9F;
             font-weight: 700;
         }
     }
-    
+
 }
 
 h1 {
@@ -48,7 +59,8 @@ h1 {
     letter-spacing: 0.02em;
     color: #000000;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -57,3 +69,4 @@ a{
 @import './Layout/Footer/Footer.module.scss';
 @import './pages/Shop/Shop.module.scss';
 @import './components/ProductList/ProductList.scss';
+@import './components/pagination/Pagination.style.scss';

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { Breadcrumbs } from "../../components/Breadcrumbs/Breadcrumbs";
 import { ProductList } from "../../components/ProductList/ProductList";
 
 
 export const Shop = () => {
 
-  const [category, setCategory] = useState<string>('all')
+  const [category, setCategory] = useState<string>('all');
 
   return (
     <div className="container">
@@ -21,9 +20,7 @@ export const Shop = () => {
           <li className={`categories__link ${category === 'cardigans' && 'categories__link_active'}`} onClick={() => setCategory('cardigans')}>Cardigans</li>
           <li className={`categories__link ${category === 'hoodies' && 'categories__link_active'}`} onClick={() => setCategory('hoodies')}>Hoodies</li>
         </ul>
-        <div className="calculation-products">Showed 9 from 12 goods</div>
         <ProductList category={category} />
-        <div className="calculation-products">Showed 9 from 12 goods</div>
       </div>
     </div>
   );
