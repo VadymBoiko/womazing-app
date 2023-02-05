@@ -1,5 +1,5 @@
 import { useEffect, FC, useState } from 'react';
-import { getProducts } from '../../features/products/productSlice';
+import { getProducts } from '../../features/products/productsSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/useTypedSelector';
 import Pagination from '../pagination/Pagination';
 import { Product } from '../Product/Product';
@@ -17,6 +17,7 @@ export const ProductList: FC<ProductListProps> = ({ category }) => {
   const dispatch = useAppDispatch();
 
   const { data, error, loading } = useAppSelector((state) => state);
+ 
 
   useEffect(() => {
     dispatch(getProducts())

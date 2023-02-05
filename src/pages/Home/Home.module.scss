@@ -54,6 +54,10 @@ h2{
 .text-slider {
     width: 650px;
     margin-top: 265px;
+    &__title{
+        width: 585px;
+        height: 200px;
+    }
     &__text {
         width: 385px ;
         font-weight: 400;

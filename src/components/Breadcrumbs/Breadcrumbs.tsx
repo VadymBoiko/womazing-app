@@ -14,7 +14,7 @@ export const Breadcrumbs = () => {
   const crumbs = location.pathname.split('/')
     .filter(crumb => crumb !== '')
 
-
+    
   return (
     <nav className='breadcrumbs'>
       <ul className='breadcrumbs__list'>

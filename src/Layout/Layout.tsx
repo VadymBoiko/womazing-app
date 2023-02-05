@@ -9,6 +9,7 @@ import { Shop } from "../pages/Shop/Shop";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import { Cart } from "../pages/Cart/Cart";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
 
 export const Layout = () => {
   return (
@@ -17,6 +18,7 @@ export const Layout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<ProductDetails />}/>
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/cart" element={<Cart/>}/>
           <Route path="/about" element={<About />} />
