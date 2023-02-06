@@ -16,7 +16,7 @@ export const ProductList: FC<ProductListProps> = ({ category }) => {
 
   const dispatch = useAppDispatch();
 
-  const { data, error, loading } = useAppSelector((state) => state);
+  const { data, error, loading } = useAppSelector((state) => state.productsSlice);
  
 
   useEffect(() => {

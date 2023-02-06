@@ -1,3 +1,101 @@
 .product{
+    display: flex;
+    margin-top: 109px;
+    &__title{
+        margin-top: 189px;
+    }
+    &__image{
+        width: 536px;
+        height: 729px;
+    }
+    &__image > img {
+        width: 100%;
+        height: 100%;
+    }
+    &__details{
+        margin: 117px 74px ;
+    }
+    &__price{
+        color: #998E78;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 110%;
+        margin-bottom:  59px;
+    }
+    &__size-title{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    &__sizes{
+        display: flex;
+        gap: 10px;
+        margin: 34px 0 59px 0;
+        list-style-type: none;
+    }
+    &__size{
+        width: 41px;
+        height: 41px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000; 
+        font-size: 17px;
+        line-height: 140%;
+        cursor: pointer;
+        &_active{
+            background-color: #000000;
+            color: white;
+        }
+    }
+    &__colors-title{
+        @extend .product__size-title;
+    }
+    &__colors{
+        @extend .product__sizes
     
+    }
+    &__color{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        &_active{
+            border: 1px solid black;
+        }
+    }
+    &__count{
+        width: 68px;
+        height: 68px;
+        border: 1px solid #AFAFAF;
+        outline: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        text-align: center;
+    }
+    &__btn{
+        width: 268px;
+        height: 68px;
+        background-color: #6E9C9F;
+        border: none;
+        outline: none;
+        color: white;
+        margin-left: 10px;
+    }
+    &__btn:hover{
+        background-color: #509498;
+    }
+}
+.connection{
+    &__title{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 110%; 
+    }
+    &__list{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 130px;
+    }
 }

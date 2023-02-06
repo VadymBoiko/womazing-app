@@ -191,6 +191,7 @@ h2{
         object-position: 1 0;
     }
     &__title{
+        text-align: center;
         margin: 24px 0 7px 0;
         font-weight: 500;
         font-size: 20px;
@@ -199,6 +200,7 @@ h2{
         color: #000000;
     }
     &__price{
+        text-align: center;
         font-weight: 500;
         font-size: 15px;
         line-height: 140%;

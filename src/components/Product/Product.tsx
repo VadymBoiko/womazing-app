@@ -10,7 +10,7 @@ interface ProductProps {
 export const Product:FC<ProductProps> = ({product}) => {
   return (
     <div className="card-item">
-      <Link to={`${product.id}`}>
+      <Link to={`/Shop/${product.id}`}>
       <div className="card-item__img-wrapper">
         <Overlay />
         <img

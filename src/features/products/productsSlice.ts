@@ -2,24 +2,16 @@ import { createSlice, createAsyncThunk, PayloadAction} from "@reduxjs/toolkit";
 import { IProduct } from '../../interfaces/interfaces';
 import ProductServices from "../../services/ProductServices";
 
-interface ProductState {
+interface ProductsState {
     loading: boolean,
     error:null | string,
-    data: null | Product[]
+    data: null | IProduct[]
 }
 
-interface Product{
-    id: number,
-    title: string,
-    price: number,
-    category: string,
-    image:string,
-    sizes: Array<string>,
-    colors: Array<string>
-}
+
 
 // Action
-export const getProducts = createAsyncThunk<Product[], undefined, {rejectValue: string}>(
+export const getProducts = createAsyncThunk<IProduct[], undefined, {rejectValue: string}>(
     "products/getProducts",
     async() => {
             const responce = await ProductServices.getAllProduct();
@@ -32,12 +24,12 @@ const initialState = {
     loading: false,
     error: null,
     data: null
-} as ProductState
+} as ProductsState
 
 
 // Slice
 
-const productSlice = createSlice({
+const productsSlice = createSlice({
     name: "products",
     initialState,
     reducers: {},
@@ -59,6 +51,5 @@ const productSlice = createSlice({
 });
 
 
-export default productSlice.reducer
-export const selectOneProduct = (state:ProductState, productId:string | undefined) => 
-    state.data?.find((product) => product.id.toString() === productId?.toString() )
+export default productsSlice.reducer
+
