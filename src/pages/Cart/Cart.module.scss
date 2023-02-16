@@ -1,0 +1,61 @@
+.cart-title{
+    margin-top: 269px;
+}
+
+.table{
+    &__head{
+        display: flex;
+        margin-bottom: 26px;
+        padding-right: 84px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+    }
+    &__head-color{
+        margin-left:300px ;
+    }
+    &__head-size{
+        margin-left: 75px;
+    }
+    &__head-price{
+        margin-left: 75px;
+    }
+    &__head-count{
+        margin: 0 150px 0 75px;
+    }
+}
+.productsInCart{
+    padding: 50px 0;
+    padding-right: 84px;
+}
+.formCart{
+    display: flex;
+    justify-content: space-between;
+    margin: 77px 0 89px 0;
+    &__input{
+        width: 255px; 
+        margin-right: 16px;
+    }
+    &__coupon-wrapper{
+        display: flex;
+    }
+}
+.form-confirm{
+    margin-bottom: 130px;
+
+    &__summary{
+        display: flex;
+        margin-top: 28px;
+    }
+    &__total{
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        width: 287px;
+        height: 68px;
+        background: #F1EADC;
+        font-size: 25px;
+        padding: 16px 31px;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,14 @@
+input{
+    width: 350px;
+    height: 68px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: #000000
+}
+input::placeholder{
+    color: #868686;
+}

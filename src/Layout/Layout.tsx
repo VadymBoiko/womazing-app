@@ -9,7 +9,7 @@ import { Shop } from "../pages/Shop/Shop";
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 import { Cart } from "../pages/Cart/Cart";
-import ProductDetails from "../components/ProductDetails/ProductDetails";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
 
 export const Layout = () => {
   return (

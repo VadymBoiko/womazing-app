@@ -23,7 +23,7 @@ export const ProductList: FC<ProductListProps> = ({ category }) => {
     dispatch(getProducts())
   }, [dispatch]);
 
-  const filteredData = data?.filter((product) => {
+  const filteredData = data.filter((product) => {
     if (category === 'all') {
       return data
     } else {
@@ -46,7 +46,7 @@ export const ProductList: FC<ProductListProps> = ({ category }) => {
       <div className="products">
         {error && <p>oh no that is error</p>}
         {loading && <p>loading...</p>}
-        {data && currentProduct !== undefined && currentProduct.map(product => (
+        {data && currentProduct.map(product => (
           <Product product={product} key={product.id} />
         ))}
       </div>

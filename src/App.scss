@@ -61,10 +61,21 @@ a {
     text-decoration: none;
 }
 
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@import './components/UI/Button/Button.module.scss';
+@import './components/UI/Input/InputField.module.scss';
+
 @import './Layout/Header/Header.module.scss';
 @import './pages/Home/Home.module.scss';
 @import './Layout/Footer/Footer.module.scss';
 @import './pages/Shop/Shop.module.scss';
 @import './components/ProductList/ProductList.scss';
-@import './components/ProductDetails/ProductDetails.style.scss';
+@import './pages/ProductDetails/ProductDetails.style.scss';
 @import './components/pagination/Pagination.style.scss';
+@import './pages/Cart/Cart.module.scss';
+@import './components/CartItem/CartItem.module.scss';

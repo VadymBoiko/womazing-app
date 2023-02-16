@@ -2,15 +2,15 @@ import api from '../api/closest';
 import { IProduct } from '../interfaces/interfaces';
 
 const getAllProduct = () => {
-    return api.get<Array<IProduct>>("closest")
+    return api.get<IProduct[]>("closest")
 };
-const getDetails = (id:string | undefined) => {
+const getSingleProduct = (id: number) => {
     return api.get<IProduct>(`closest/${id}`)
-}
+};
 
 const ProductServices={
     getAllProduct,
-    getDetails,
+    getSingleProduct
 };
 
 export default ProductServices

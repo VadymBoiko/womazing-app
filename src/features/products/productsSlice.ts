@@ -2,28 +2,40 @@ import { createSlice, createAsyncThunk, PayloadAction} from "@reduxjs/toolkit";
 import { IProduct } from '../../interfaces/interfaces';
 import ProductServices from "../../services/ProductServices";
 
+
 interface ProductsState {
     loading: boolean,
-    error:null | string,
-    data: null | IProduct[]
+    error: null | string,
+    data: IProduct[],
+    loadingSingle: boolean,
+    productSingle: null | IProduct,
 }
 
 
 
 // Action
-export const getProducts = createAsyncThunk<IProduct[], undefined, {rejectValue: string}>(
-    "products/getProducts",
+export const getProducts =  createAsyncThunk(
+    'products', 
     async() => {
-            const responce = await ProductServices.getAllProduct();
-            return responce.data;
+        const responce = await ProductServices.getAllProduct();
+        return responce.data      
+})
+
+export const getSingleProduct = createAsyncThunk(
+    'single-product',
+    async(id:number) => {
+        const responce = await ProductServices.getSingleProduct(id);
+        return responce.data 
     }
-);
+)
 
 
 const initialState = {
     loading: false,
     error: null,
-    data: null
+    data: [],
+    loadingSingle: false,
+    productSingle: null,
 } as ProductsState
 
 
@@ -46,6 +58,13 @@ const productsSlice = createSlice({
                 state.loading = false;
                 state.error = action.payload
             })     
+            .addCase(getSingleProduct.pending, (state) => {
+                state.loadingSingle = true;
+            }) 
+            .addCase(getSingleProduct.fulfilled, (state, action:PayloadAction<IProduct>) =>{
+                state.loadingSingle = false;
+                state.productSingle = action.payload;
+            })
     },
 
 });

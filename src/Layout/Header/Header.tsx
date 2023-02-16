@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Call } from "../../icons/Call";
-import { CartIcon } from "../../icons/CartIcon";
+import { ReactComponent as CartIconSVG } from "../../icons/CartIcon.svg";
 import { Navbar } from "../Navbar";
 
 
@@ -17,9 +18,11 @@ export const Header = () => {
           <span>+7 (495) 823-54-12</span>
         </div>
         <div className="header__cart">
-          <span>
-            <CartIcon/>
+          <Link to='/cart'>
+          <span className="cartBackground">
+            <CartIconSVG/>
           </span>
+          </Link>
         </div>
       </header>
     </div>
